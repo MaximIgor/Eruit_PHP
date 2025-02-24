@@ -1,0 +1,73 @@
+<!-- <ul id="tool_area">
+    <li class="label">
+        <h2>Tools</h2>
+    </li>
+    <li tool="text"><img src="img/icon_text.png"></li>
+
+    <li tool="line"><img src="img/icon_line.png"></li>
+
+    <li class="parent">
+
+        <img src="img/icon_shape.png" id="btn_shape">
+
+        <dd>
+
+            <dl tool="rect"><img src="img/icon_rectangle.png"></dl>
+
+            <dl class="spliter">&nbsp;</dl>
+
+            <dl tool="triangle"><img src="img/icon_triangle.png"></dl>
+
+            <dl class="spliter">&nbsp;</dl>
+
+            <dl tool="circle"><img src="img/icon_circle.png"></dl>
+
+            <dl class="spliter">&nbsp;</dl>
+
+            <dl tool="star"><img src="img/icon_star.png"></dl>
+
+            <dl class="spliter">&nbsp;</dl>
+
+            <dl tool="ellipse"><img src="img/icon_ellipse.png"></dl>
+
+        </dd>
+
+    </li>
+
+</ul> -->
+
+
+
+<ul class="icon-panel" id="tool_area">
+    <li tool="text" class="icon-button" onclick="setActive(this)">
+        <img src="img/icon_text.png">
+    </li>
+    <li tool="line" class="icon-button" onclick="setActive(this)">
+        <img src="img/icon_line.png">
+    </li>
+    <li tool="triangle" class="icon-button" onclick="setActive(this)">
+        <img src="img/icon_triangle.png">
+    </li>
+    <li tool="circle" class="icon-button" onclick="setActive(this)">
+        <img src="img/icon_circle.png">
+    </li>
+    <li tool="star" class="icon-button" onclick="setActive(this)">
+        <img src="img/icon_star.png">
+    </li>
+    <li tool="ellipse" class="icon-button" onclick="setActive(this)">
+        <img src="img/icon_ellipse.png">
+    </li>
+
+</ul>
+
+<script>
+    function setActive(button) {
+        // Remove 'active' class from all buttons
+        document.querySelectorAll('.icon-button').forEach(btn => {
+            btn.classList.remove('active');
+        });
+
+        // Add 'active' class to the clicked button
+        button.classList.add('active');
+    }
+</script>

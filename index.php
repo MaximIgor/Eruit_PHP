@@ -67,13 +67,15 @@
 <html>
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>3D Floor Plan Editing Tool</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>3D Floor Plan Editing Tool</title>
 
-<link rel="stylesheet" type="text/css" href="style/style.css" />
-<link rel="stylesheet" type="text/css" href="style/overlay.css" />
-<link rel="stylesheet" type="text/css" href="style/jquery-ui.css" />
-<link rel="stylesheet" type="text/css" href="style/colorpicker.css" />
+    <link rel="stylesheet" type="text/css" href="style/style.css" />
+    <link rel="stylesheet" type="text/css" href="style/overlay.css" />
+    <link rel="stylesheet" type="text/css" href="style/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="style/colorpicker.css" />
+    <link rel="stylesheet" type="text/css" href="style/newStyle.css" />
+    <link rel="stylesheet" type="text/css" href="style/tool.css" />
 </head>
 
 <script type="text/javascript" src="js/library/jquery.min.js"></script>
@@ -102,13 +104,19 @@
 
 <body>
 
-	<div id="top_area">
+    <!-- <div id="top_area">
     	<a href="<?='http://'.$_SERVER['HTTP_HOST']?>">
         	<img src="img/logo.png">
         </a>
+    </div> -->
+
+    <div class="header">
+        <div class="login_logo">
+            <img width="74px" height="24.7px" style="padding-top: 15px;" src="img/logo.png" alt="login_logo">
+        </div>
     </div>
 
-    <div id="overlay"></div>
+    <!-- <div id="overlay"></div> -->
     <div id="over_overlay">
         <?php require_once(__DIR__."/theme/overlay.html"); ?>
     </div>
@@ -116,7 +124,7 @@
     <div id="area_2d">
         <div id="ctrl_area">
             <ul>
-                <li><img src="img/book.gif"></li>
+                <!-- <li><img src="img/book.gif"></li>
                 <li><img src="img/folder.gif"></li>
                 <li><img src="img/card.gif"></li>
                 <li><img src="img/save_as.png"></li>
@@ -127,51 +135,35 @@
                 <li class="spliter">&nbsp;</li>
                 <li><img src="img/3D.gif"></li>
                 <li class="spliter">&nbsp;</li>
-                <!--li><img src="img/copy 4.gif"></li>
-                <li><img src="img/copy 3.gif"></li>
-                <li><img src="img/copy 2.gif"></li>
-                <li><img src="img/copy 1.gif"></li>
-                <li class="spliter">&nbsp;</li-->
                 <li><img src="img/ring.gif"></li>
-                <li><img src="img/star.gif"></li>
+                <li><img src="img/star.gif"></li> -->
+
+
+                <li><img src="img/new/book.png"></li>
+                <li>&nbsp;</li>
+                <li><img src="img/new/folder.png"></li>
+                <li>&nbsp;</li>
+                <li><img src="img/new/card.png"></li>
+                <li>&nbsp;</li>
+                <li><img src="img/new/copy.png"></li>
+                <li class="spliter">&nbsp;</li>
+                <li>&nbsp;</li>
+                <li><img style="margin-top: 10px;" src="img/new/3D.png"></li>
+                <li><img src="img/new/copy.png"></li>
+                <li>&nbsp;</li>            
+                <li class="spliter">&nbsp;</li>
+                <li>&nbsp;</li>
+                <li><img style="margin-top: 5px;" src="img/new/x.png"></li>
+                <li class="spliter">&nbsp;</li>
+                <li><img src="img/new/Group 5.png"></li>
+                <li>&nbsp;</li>
+                <li><img src="img/new/Group 6.png"></li>
             </ul>
         </div>
-        <ul id="tool_area">
-            <li class="label"><h2>Tools</h2></li>
 
-            <li tool="text"><img src="img/icon_text.png"></li>
 
-            <li tool="line"><img src="img/icon_line.png"></li>
-
-            <li class="parent">
-
-                <img src="img/icon_shape.png" id="btn_shape">
-
-                <dd>
-
-                    <dl tool="rect"><img src="img/icon_rectangle.png"></dl>
-
-                    <dl class="spliter">&nbsp;</dl>
-
-                    <dl tool="triangle"><img src="img/icon_triangle.png"></dl>
-
-                    <dl class="spliter">&nbsp;</dl>
-
-                    <dl tool="circle"><img src="img/icon_circle.png"></dl>
-
-                    <dl class="spliter">&nbsp;</dl>
-
-                    <dl tool="star"><img src="img/icon_star.png"></dl>
-
-                    <dl class="spliter">&nbsp;</dl>
-
-                    <dl tool="ellipse"><img src="img/icon_ellipse.png"></dl>
-
-                </dd>
-
-            </li>
-
-        </ul>
+        <?php require_once(__DIR__."/theme/tool.html"); ?>
+        
 
 
 
@@ -183,8 +175,8 @@
         </div>
 
 
-
-        <div id="left_area">
+        
+        <!-- <div id="left_area">
 
             <div id="recycle_area"></div>
 
@@ -194,35 +186,7 @@
 
                 <ul>
 
-                    <?php echo $obj_html; ?>
-
-                    <!--li tool='image' twod="Chair with cover white map.png" thrd="Chir_whiteMap.obj" size="0.7,0.7,0.5">
-
-                        <img src="img/objs/2d_icon/White_chir.jpeg" />
-
-                    </li>
-
-                    <li tool='image' twod="table_01 top.png" thrd="Table_01.obj" size="2.4,2.4,0.5">
-
-                        <img src="img/objs/2d_icon/table_01.jpg" />
-
-                    </li>
-
-                    <li tool='image' twod="2_4m_SQ_table_black_noMap.png" thrd="TableSq_2_4m_black_noMap.obj" size="2.4,2.4,1.5">
-
-                        <img src="img/objs/2d_icon/TableSq_2_4m_Black_noMap.jpeg" />
-
-                    </li>
-
-                    <li tool='image' twod="TableSq_2m_white_12Chairs.png" thrd="squire table with White map cover 2M with 12 chairs.obj" size="3,3,0.5">
-
-                        <img src="img/objs/2d_icon/squire table with White map cover 2M with 12 chairs.jpg" />
-
-                    </li>
-
-                    <li tool='image' twod="rounded table with white map cover 2M with 11 chairs.png" thrd="rounded table with white map cover 2M with 11 chairs.obj" size="3,3,0.5">
-
-                        <img src="img/objs/2d_icon/rounded table with white map cover 2M with 11 chairs.jpeg" /-->
+                     <?php echo $obj_html; ?> 
 
                     </li>
 
@@ -230,11 +194,11 @@
 
                 <div class="clear_both"></div>
 
-            </div>
+            </div> 
 
             <a id="btn_add_obj">Add new Object</a>
 
-        </div>
+        </div> -->
 
 
 
@@ -252,9 +216,13 @@
 
         </div>
 
-        <div id="move_controlT"><center><img src="img/icon-arrow-down.png" /></center></div>
-   		<div id="move_controlB"><center><img src="img/icon-arrow-projectlist.png" /></center></div>
-	</div>
+        <div id="move_controlT">
+            <center><img src="img/icon-arrow-down.png" /></center>
+        </div>
+        <div id="move_controlB">
+            <center><img src="img/icon-arrow-projectlist.png" /></center>
+        </div>
+    </div>
 
     <div id="area_3d">
         <img src="img/close.png" id="img_close3d">

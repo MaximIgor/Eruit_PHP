@@ -109,12 +109,12 @@ input.small		{width: 40px; height: 35px; font-size: 20px; padding-left: 5px;}
 #ctrl_area img 	{ width: 32px;}
 #ctrl_area ul  	{ right : 100px; float: right; width: 500px;}
 #ctrl_area ul li{ float: left; margin-right: 5px; cursor: pointer;}	
-.spliter 		{ background:url("../img/spliter.png"); background-position:center center; height: 32px; margin-left: 10px; margin-right: 15px !important;}
+/* .spliter 		{ background:url("../img/spliter.png"); background-position:center center; height: 32px; margin-left: 10px; margin-right: 15px !important;} */
 
-#tool_area 		{ position: absolute; z-index: 33; left: 225px; top: 120px; background-color: white; box-shadow: 0px 0px 5px gray; width: 45px;}
+#tool_area 		{ position: absolute; z-index: 33; left: 225px; top: 120px;  box-shadow: 0px 0px 5px gray; width: 45px;}
 #tool_area h2 	{ font-size: 14px;}
 #tool_area li 	{ text-align: center; margin-bottom: 15px; cursor: pointer;}
-#tool_area dd 	{ background-color: white; width: 265px; height: 40px; padding:5px; box-shadow: 3px 0px 3px gray; border:1px solid gray; border-left: 0px none; position: absolute; margin-top: -45px; margin-left: 45px; display: none;}
+#tool_area dd 	{  width: 265px; height: 40px; padding:5px; box-shadow: 3px 0px 3px gray; border:1px solid gray; border-left: 0px none; position: absolute; margin-top: -45px; margin-left: 45px; display: none;}
 #tool_area dl 	{ float: left; margin:0px; padding:0px; margin-right: 5px;}
 #tool_area .spliter{margin: 0px; margin-right: 5px !important;  margin-top: 5px;}
 

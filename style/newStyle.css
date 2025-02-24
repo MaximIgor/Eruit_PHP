@@ -1,8 +1,6 @@
-/*       NEW style          */
-
-.login_log{
-	img{
-		width: 74px;
-		height: 24.69px;
-	}
+.login_logo {
+	width: 1895px;
+	height: 53px;
+	background-color: #32353c;
+	padding-left: 25px;
 }

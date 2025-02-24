@@ -1,0 +1,41 @@
+.icon-panel {
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.icon-button {
+    width: 48px; /* Adjust size as needed */
+    height: 48px; /* Adjust size as needed */
+    border: none;
+    background-color: #444; /* Button Background */
+    margin-bottom: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-button:last-child {
+    margin-bottom: 0; /* Remove margin from the last button */
+}
+
+.icon-button:hover {
+    background-color: #555;
+}
+
+.icon-button.active {
+    background-color: #007bff; /* Active Button Color */
+}
+
+.icon-button img {
+    width: 24px; /* Adjust icon size */
+    height: 24px; /* Adjust icon size */
+    filter: grayscale(1);
+}
+.icon-button.active img {
+    filter: none;
+}
