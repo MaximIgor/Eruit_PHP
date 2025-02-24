@@ -1,0 +1,55 @@
+
+.object-list-container {
+    width: 100%;
+    background-color: #333;
+    border-radius: 5px;
+    overflow: hidden;  /* keeps the rounded corners consistent */
+  }
+  
+  
+  .object-list-item {
+    padding: 10px 15px;
+    border-bottom: 1px solid #444;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .object-list-item:hover {
+      background-color: #444;
+  }
+  
+  .object-list-item:last-child {
+    border-bottom: none;
+  }
+  
+  .add-object {
+    background-color: #444;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 15px;
+    color: white;
+    display: flex;
+    align-items: center; /* vertically center the content */
+    transition: background-color 0.2s ease; /* smooth hover effect */
+  }
+  
+  .add-object:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  .add-object .plus-sign {
+    font-size: 1.2em;  /* Slightly larger plus sign */
+    margin-right: 10px;
+  }
+  
+  .remove-sign {
+    margin-right: 10px;
+  }
+  
+  .remove-sign::before {  /* CSS generated content for the minus sign */
+    content: "\2013"; /* Unicode for en dash (can also use –) */
+    margin-right: 5px;
+  }

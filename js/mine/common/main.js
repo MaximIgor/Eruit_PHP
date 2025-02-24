@@ -42,7 +42,7 @@ var initEnv			= function()
 		var footer_left = ($(window).width() - 601) / 2;
 
 		$("#canvas_area").css('left',left);
-		$("#canvas_area").css('top',top);
+		$("#canvas_area").css('top',`90px`);
 		$("#canvas_area").css("width",main.canvWidth * main.rate);
 		$("#canvas_area").css("height",main.canvHeight * main.rate + 35);
 

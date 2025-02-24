@@ -76,6 +76,7 @@
     <link rel="stylesheet" type="text/css" href="style/colorpicker.css" />
     <link rel="stylesheet" type="text/css" href="style/newStyle.css" />
     <link rel="stylesheet" type="text/css" href="style/tool.css" />
+    <link rel="stylesheet" type="text/css" href="style/addObject.css" />
 </head>
 
 <script type="text/javascript" src="js/library/jquery.min.js"></script>
@@ -150,7 +151,7 @@
                 <li>&nbsp;</li>
                 <li><img style="margin-top: 10px;" src="img/new/3D.png"></li>
                 <li><img src="img/new/copy.png"></li>
-                <li>&nbsp;</li>            
+                <li>&nbsp;</li>
                 <li class="spliter">&nbsp;</li>
                 <li>&nbsp;</li>
                 <li><img style="margin-top: 5px;" src="img/new/x.png"></li>
@@ -163,7 +164,7 @@
 
 
         <?php require_once(__DIR__."/theme/tool.html"); ?>
-        
+
 
 
 
@@ -175,30 +176,33 @@
         </div>
 
 
-        
-        <!-- <div id="left_area">
 
+
+        <div id="left_area" style="display: flex;">
+            <div style="width: 10%; padding-top: 37px;">
+                <!-- <a id="btn_add_obj">Add new Object</a> -->
+                <div class="object-list-container">
+
+                    <div class="add-object" id="btn_add_obj">
+                        <span class="plus-sign">+</span>
+                        Add new object
+                    </div>
+                </div>
+            </div>
+            <div style="width: 85%;padding: 5px 10px;">
+                <div class="category" id="floorArea">
+                    <div style="background-color: #333436; color: white; text-align: center; padding: 5px 0px;">
+                        <span>Please select objects</span></div>
+                    <ul style="display: flex;">
+                        <?php echo $obj_html; ?>
+                        </li>
+                    </ul>
+                    <div class="clear_both"></div>
+                </div>
+            </div>
             <div id="recycle_area"></div>
 
-            <div id="left_slider"></div>
-            <h2>Please select Objects:</h2>
-            <div class="category" id="floorArea">
-
-                <ul>
-
-                     <?php echo $obj_html; ?> 
-
-                    </li>
-
-                </ul>
-
-                <div class="clear_both"></div>
-
-            </div> 
-
-            <a id="btn_add_obj">Add new Object</a>
-
-        </div> -->
+        </div>
 
 
 
@@ -228,4 +232,5 @@
         <img src="img/close.png" id="img_close3d">
         <img src="img/btn_3d_export.png" id="export_3d">
     </div>
+
 </body>
